@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+  }
+  
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, 0.5);
+    border-radius: 3px;
+  }
+  
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Ensures no overflow from scaling */
+}
+
+.iframe-container iframe {
+  transform: scale(0.5); /* Adjust the scale factor as needed */
+  transform-origin: top left; /* Keeps the scaling origin at the top left */
+  width: 200%; /* Compensates for the scale to keep full content visible */
+  height: 200%; /* Compensates for the scale to keep full content visible */
+  border: none; /* Optional: Ensure there are no borders */
+}
