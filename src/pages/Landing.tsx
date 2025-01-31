@@ -33,9 +33,9 @@ export default function LandingPage() {
 
       <main className="container mx-auto px-6 py-8">
         <section className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-4">Welcome to Appweaver</h1>
-          <p className="text-gray-400 text-lg">
-            Discover, create, and share amazing projects with our community.
+          <h1 className="text-5xl font-extrabold text-white mb-4">Welcome to Appweaver</h1>
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+            Discover, create, and share amazing projects with our community. Whether you're a beginner or an expert, you'll find endless possibilities here.
           </p>
         </section>
 
@@ -48,17 +48,22 @@ export default function LandingPage() {
     </div>
   );
 }
+
 interface FeatureCardProps {
-    title: string;
-    description: string;
-    icon: string; // Assuming icon is a string, you might want to use a more specific type if it's a JSX element or component
-  }
-  function FeatureCard({ title, description, icon }: FeatureCardProps) {
-    return (
-    <div className="bg-gray-800 rounded-xl p-6 flex flex-col items-center text-center">
+  title: string;
+  description: string;
+  icon: string;
+}
+
+function FeatureCard({ title, description, icon }: FeatureCardProps) {
+  return (
+    <motion.div 
+      className="bg-gray-800 rounded-xl p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:bg-gray-700"
+      whileHover={{ scale: 1.05 }}
+    >
       <div className="text-4xl mb-4">{icon}</div>
       <h2 className="text-2xl font-semibold text-white">{title}</h2>
       <p className="text-gray-400">{description}</p>
-    </div>
+    </motion.div>
   );
 }
