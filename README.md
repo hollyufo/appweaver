@@ -2,7 +2,7 @@
 
 A modern, intuitive website generator powered by LLMs that transforms text descriptions into fully functional websites in real-time.
 
- ![APP WEAVER 2](https://github.com/user-attachments/assets/0f84cabd-5fde-4088-9179-1ea046f95861)
+ ![APP WEAVER 2](https://github.com/hollyufo/appweaver/blob/main/public/image.png?raw=true)
 
  
 
